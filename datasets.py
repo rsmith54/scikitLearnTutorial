@@ -12,7 +12,8 @@ print(digits.images.shape)
 
 
 plt.imshow(digits.images[-1], cmap=plt.cm.gray_r)
+#plt.show()
 
+data = digits.images.reshape((digits.images.shape[0], -1))
 
-import time
-time.sleep(1000)
+print(data)
