@@ -23,3 +23,5 @@ logistic.fit(digits_X_train, digits_y_train)
 print(logistic)
 print([logistic.predict(digits_X_test)])
 print(digits_y_test)
+
+print('LogisticRegression score: %f' % logistic.fit(digits_X_train, digits_y_train).score(digits_X_test, digits_y_test))
