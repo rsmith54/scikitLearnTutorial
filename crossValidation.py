@@ -24,7 +24,6 @@ for k in range(3):
 
 print(scores)
 
-k_fold = cross_validation.KFold(n=6, n_folds=3)
-for train_indices, test_indices in k_fold:
-     print('Train: %s | test: %s' % (train_indices, test_indices))
+kfold = cross_validation.KFold(len(X_digits), n_folds=3)
+print([svc.fit(X_digits[train], y_digits[train]).score(X_digits[test], y_digits[test]) for train, test in kfold])
 
