@@ -26,4 +26,4 @@ print(scores)
 
 kfold = cross_validation.KFold(len(X_digits), n_folds=3)
 print([svc.fit(X_digits[train], y_digits[train]).score(X_digits[test], y_digits[test]) for train, test in kfold])
-
+print(cross_validation.cross_val_score(svc, X_digits, y_digits, cv=kfold, n_jobs=-1))
