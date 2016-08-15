@@ -3,6 +3,8 @@ from sklearn import datasets,svm
 from sklearn.grid_search import GridSearchCV
 import numpy as np
 
+from sklearn import cross_validation
+
 digits = datasets.load_digits()
 X_digits = digits.data
 y_digits = digits.target
@@ -21,3 +23,4 @@ print(clf.best_estimator_.C)
 # Prediction performance on test set is not as good as on train set
 print(clf.score(X_digits[1000:], y_digits[1000:]))
 
+print(cross_validation.cross_val_score(clf, X_digits, y_digits))
