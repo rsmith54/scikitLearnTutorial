@@ -1,3 +1,5 @@
+import numpy as np
+
 # Create a signal with only 2 useful dimensions
 x1 = np.random.normal(size=100)
 x2 = np.random.normal(size=100)
