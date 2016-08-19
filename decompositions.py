@@ -6,6 +6,8 @@ x2 = np.random.normal(size=100)
 x3 = x1 + x2
 X = np.c_[x1, x2, x3]
 
+print(X)
+
 from sklearn import decomposition
 pca = decomposition.PCA()
 pca.fit(X)
